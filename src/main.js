@@ -16,5 +16,9 @@ function render(category='todos'){
 render();
 document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelector('.tab.active')?.classList.remove('active');tab.classList.add('active');render(tab.dataset.category)}));
 function openWhatsApp(message){ window.open(`https://wa.me/56322830006?text=${encodeURIComponent(message)}`,'_blank','noopener,noreferrer'); }
+function formatReservationDate(value){
+  const match=String(value||'').match(/^(\\d{4})-(\\d{2})-(\\d{2})$/);
+  return match ? `${match[3]}/${match[2]}/${match[1]}` : String(value||'');
+}
 document.querySelectorAll('[data-action="attention"]').forEach(button=>button.addEventListener('click',()=>openWhatsApp('Hola Oceanic Restobar, estoy en una mesa y necesito atención.')));
-document.querySelector('#reservation-form').addEventListener('submit',(event)=>{event.preventDefault();const form=new FormData(event.currentTarget);const name=form.get('name');const date=form.get('date');const people=form.get('people');openWhatsApp(`Hola Oceanic Restobar, soy ${name}. Me gustaría reservar una mesa para ${people} el día ${date}. ¿Me confirman disponibilidad?`);showToast('Abriendo WhatsApp para confirmar tu solicitud…');});
+document.querySelector('#reservation-form').addEventListener('submit',(event)=>{event.preventDefault();const form=new FormData(event.currentTarget);const name=form.get('name');const date=formatReservationDate(form.get('date'));const people=form.get('people');openWhatsApp(`Hola Oceanic Restobar, soy ${name}. Me gustaría reservar una mesa para ${people} el día ${date}. ¿Me confirman disponibilidad?`);showToast('Abriendo WhatsApp para confirmar tu solicitud…');});
