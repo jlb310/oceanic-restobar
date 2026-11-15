@@ -19,8 +19,8 @@ render();
 document.querySelectorAll<HTMLButtonElement>('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelector('.tab.active')?.classList.remove('active');tab.classList.add('active');render(tab.dataset.category as Category)}));
 function openWhatsApp(message:string){ window.open(`https://wa.me/56322830006?text=${encodeURIComponent(message)}`,'_blank','noopener,noreferrer'); }
 function formatReservationDate(value:FormDataEntryValue|null){
-  const match=String(value||'').match(/^(\\d{4})-(\\d{2})-(\\d{2})$/);
-  return match ? `${match[3]}/${match[2]}/${match[1]}` : String(value||'');
+  const parts=String(value||'').split('-');
+  return parts.length===3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : String(value||'');
 }
 document.querySelectorAll<HTMLElement>('[data-action="attention"]').forEach(button=>button.addEventListener('click',()=>openWhatsApp('Hola Oceanic Restobar, estoy en una mesa y necesito atención.')));
 document.querySelector<HTMLFormElement>('#reservation-form')!.addEventListener('submit',(event)=>{event.preventDefault();const form=new FormData(event.currentTarget as HTMLFormElement);const name=form.get('name');const date=formatReservationDate(form.get('date'));const people=form.get('people');openWhatsApp(`Hola Oceanic Restobar, soy ${name}. Me gustaría reservar una mesa para ${people} el día ${date}. ¿Me confirman disponibilidad?`);showToast('Abriendo WhatsApp para confirmar tu solicitud…');});
