@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0d3b36" />
+  <meta name="description" content="Carta digital de Oceanic Restobar, Reñaca." />
+  <title>Oceanic Restobar · Carta digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Oceanic Restobar, inicio"><span class="brand-mark">O</span><span>OCEANIC <b>RESTOBAR</b></span></a>
+    <nav aria-label="Navegación principal"><a href="#carta">Carta</a><a href="#experiencia">Experiencia</a><a href="#contacto">Contacto</a></nav>
+    <a class="nav-cta" href="#reserva">Reservar mesa <span>↗</span></a>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-copy"><p class="eyebrow"><span class="dot"></span> Hotel Oceanic · Reñaca</p><h1>Sabores del<br><em>Pacífico</em></h1><p class="hero-intro">Una pausa frente al mar. Cocina costera, coctelería y buenos momentos en un mismo lugar.</p><div class="hero-actions"><a class="button primary" href="#carta">Ver la carta <span>↓</span></a><button class="button ghost" data-action="attention">Pedir atención</button></div><div class="hero-note"><span>✦</span> Carta actualizada · Consulta disponibilidad en tiempo real</div></div>
+      <div class="hero-visual"><div class="sun"></div><div class="hero-card"><span class="tag">RECOMENDADO</span><h2>Pesca del día</h2><p>Con papas rústicas, ensalada fresca<br>y salsa de la casa</p><strong>$18.900</strong></div><div class="wave-line"></div></div>
+    </section>
+
+    <section class="service-strip"><div><span class="service-icon">⌁</span><div><b>Frente al mar</b><small>Vista privilegiada</small></div></div><div><span class="service-icon">◷</span><div><b>12:30 — 22:30</b><small>Cocina abierta</small></div></div><div><span class="service-icon">◉</span><div><b>Atención en mesa</b><small>Estamos para ayudarte</small></div></div><a class="whatsapp-link" href="https://wa.me/56322830006" target="_blank" rel="noreferrer">Hablar por WhatsApp <span>↗</span></a></section>
+
+    <section id="carta" class="menu-section"><div class="section-heading"><div><p class="eyebrow">Nuestra carta</p><h2>Elige tu momento</h2></div><p class="section-description">Productos marcados como <span class="available">● disponibles</span> están listos para pedir hoy.</p></div><div class="category-tabs" role="tablist"><button class="tab active" data-category="todos">Todo</button><button class="tab" data-category="entradas">Para compartir</button><button class="tab" data-category="fondos">Fondos</button><button class="tab" data-category="cocteles">Bar & coctelería</button></div><div id="menu-grid" class="menu-grid"></div></section>
+
+    <section id="experiencia" class="experience"><div class="experience-photo"><span class="photo-label">OCEANIC / 01</span><div class="photo-overlay">El mar<br><em>en tu mesa</em></div></div><div class="experience-copy"><p class="eyebrow">Una invitación a quedarse</p><h2>Sin prisa,<br><em>con sabor.</em></h2><p>Inspirados por la costa de Reñaca, elegimos ingredientes frescos y preparaciones honestas para que tu visita al Oceanic sea parte del viaje.</p><button class="text-button" data-action="attention">¿Necesitas ayuda? Pide atención <span>→</span></button></div></section>
+
+    <section id="reserva" class="reservation"><div><p class="eyebrow">Tu mesa te espera</p><h2>Reserva o consulta<br>por <em>WhatsApp</em></h2><p>Cuéntanos cuándo nos visitas y te respondemos directamente.</p></div><form id="reservation-form"><label>Nombre<input name="name" required placeholder="Tu nombre" /></label><div class="form-row"><label>Fecha<input name="date" type="date" required /></label><label>Personas<select name="people"><option>2 personas</option><option>3 personas</option><option>4 personas</option><option>5+ personas</option></select></label></div><button class="button light" type="submit">Enviar solicitud <span>↗</span></button></form></section>
+  </main>
+
+  <footer id="contacto"><div class="footer-brand"><span class="brand-mark">O</span><div><strong>OCEANIC RESTOBAR</strong><small>Av. Borgoño 12925 · Reñaca, Viña del Mar</small></div></div><div class="footer-links"><a href="tel:+56322830006">+56 32 283 0006</a><a href="mailto:reservar@hoteloceanic.cl">reservar@hoteloceanic.cl</a><a class="prototype" href="https://spacehost.cl" target="_blank" rel="noreferrer">Prototipo de SpaceHost ↗</a></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
