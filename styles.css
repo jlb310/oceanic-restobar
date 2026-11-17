@@ -18,7 +18,7 @@ body { background: var(--marfil); color: var(--tinta); font: 400 16px/1.65 var(-
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 a { color: inherit; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
-h1, h2, h3 { font-family: var(--bodoni); font-weight: 400; line-height: 1.04; letter-spacing: -.015em; }
+h1, h2, h3 { font-family: var(--bodoni); font-weight: 600; line-height: 1.04; letter-spacing: -.015em; }
 em { font-style: italic; color: var(--agua); }
 .eti { font: 600 12px/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--agua); }
 :focus-visible { outline: 2px solid var(--agua); outline-offset: 3px; }
@@ -35,7 +35,7 @@ em { font-style: italic; color: var(--agua); }
 /* Navegación */
 .nav { position: fixed; inset: 0 0 auto; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px clamp(16px, 4vw, 48px); color: var(--marfil); transition: background .3s, padding .3s, color .3s, box-shadow .3s; }
 .nav.solida { background: rgba(246, 242, 234, .92); color: var(--mar); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding-block: 10px; box-shadow: 0 1px 0 var(--linea); }
-.marca { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 500 22px var(--bodoni); }
+.marca { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 600 22px var(--bodoni); }
 .marca svg { width: 34px; height: 34px; }
 .marca small, .pie-marca small { font: 600 11px var(--sans); letter-spacing: .24em; text-transform: uppercase; margin-left: 4px; opacity: .8; }
 .nav-links { display: none; gap: 32px; font-size: 15px; }
@@ -70,7 +70,7 @@ em { font-style: italic; color: var(--agua); }
 /* Intro */
 .intro { display: grid; gap: 40px; padding: clamp(72px, 11vw, 140px) clamp(16px, 5vw, 64px); align-items: center; }
 @media (min-width: 900px) { .intro { grid-template-columns: 1.1fr 1fr; gap: 80px; } }
-.cita { font: 400 clamp(30px, 4.4vw, 52px)/1.18 var(--bodoni); color: var(--mar); }
+.cita { font: 500 clamp(30px, 4.4vw, 52px)/1.18 var(--bodoni); color: var(--mar); }
 .cita em { color: var(--tenue); }
 .intro-foto { aspect-ratio: 4 / 5; overflow: hidden; border-radius: 200px 200px 6px 6px; }
 
@@ -138,13 +138,13 @@ em { font-style: italic; color: var(--agua); }
 /* Visita */
 .visita { display: grid; gap: 32px; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); }
 @media (min-width: 760px) { .visita { grid-template-columns: repeat(3, 1fr); } }
-.visita p { margin-top: 12px; font: 400 21px/1.45 var(--bodoni); color: var(--mar); }
+.visita p { margin-top: 12px; font: 500 21px/1.45 var(--bodoni); color: var(--mar); }
 .visita a { text-decoration-color: var(--agua); text-underline-offset: 4px; }
 .enlace { display: inline-block; margin-top: 12px; color: var(--agua); font-weight: 600; text-decoration: none; }
 
 /* Pie */
 .pie { padding: 40px clamp(16px, 5vw, 64px) 110px; display: grid; gap: 8px; background: var(--mar); color: #9fb0b5; font-size: 14px; }
-.pie-marca { color: var(--marfil); font: 500 28px var(--bodoni); margin-bottom: 6px; }
+.pie-marca { color: var(--marfil); font: 600 28px var(--bodoni); margin-bottom: 6px; }
 .pie-creditos { font-size: 12px; }
 
 /* Botón flotante y aviso */
